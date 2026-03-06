@@ -1,0 +1,15 @@
+// ==UserScript==
+// @name        Better fav for dashboard
+// @description Removes mask-icon
+// @match       *://dashboard.lan/*
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    const header = document.querySelector('link[rel="mask-icon"]');
+
+    if (header) {
+        header.remove();
+    }
+})();
